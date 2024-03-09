@@ -8,7 +8,7 @@ import 'package:weather_app/Models/weather_model.dart';
 class WeatherService {
   Future<Weather> getWeather(String cityName) async {
     final response = await http.get(Uri.parse(
-        'https://api.openweathermap.org/data/2.5/weather?q=$cityName&appid=ee16ea002e8f6417b3a382a9f4216d9b&units=metric'));
+        'https://api.openweathermap.org/data/2.5/weather?q=$cityName&appid=API&units=metric'));
     if (response.statusCode == 200) {
       return Weather.fromJson(jsonDecode(response.body));
     } else {
